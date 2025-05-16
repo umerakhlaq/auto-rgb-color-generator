@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RGB Color Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+
+        }
+
+        .box {
+            width: 300px;
+            height: 80vh;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .box1 {
+            width: 300px;
+            height: 80vh;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .box2 {
+            width: 300px;
+            height: 80vh;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .box3 {
+            width: 300px;
+            height: 80vh;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .box4 {
+            width: 300px;
+            height: 80vh;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 75vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>🎨 RGB Color Generator</h2>
+    <div class="container">
+        <div class="box" id="colorBox">
+            <p id="colorCode">rgb(?, ?, ?)</p>
+        </div>
+
+        <div class="box1" id="colorBox1">
+            <p id="colorCode1">rgb(?, ?, ?)</p>
+        </div>
+
+        <div class="box2" id="colorBox2">
+            <p id="colorCode2">rgb(?, ?, ?)</p>
+        </div>
+
+        <div class="box3" id="colorBox3">
+            <p id="colorCode3">rgb(?, ?, ?)</p>
+        </div>
+
+        <div class="box4" id="colorBox4">
+            <p id="colorCode4">rgb(?, ?, ?)</p>
+        </div>
+    </div>
+    <button onclick="generateColor()">Generate Color</button>
+
+    <script>
+        function generateColor() {
+
+            var r = Math.round(Math.random() * 255);
+            var g = Math.round(Math.random() * 255);
+            var b = Math.round(Math.random() * 255);
+            var rgb = `rgb(${r}, ${g}, ${b})`;
+
+            var r1 = Math.round(Math.random() * 300);
+            var g1 = Math.round(Math.random() * 300);
+            var b1 = Math.round(Math.random() * 300);
+            var rgb1 = `rgb(${r1}, ${g1}, ${b1})`;
+
+            var r2 = Math.round(Math.random() * 355);
+            var g2 = Math.round(Math.random() * 355);
+            var b2 = Math.round(Math.random() * 355);
+            var rgb2 = `rgb(${r2}, ${g2}, ${b2})`;
+
+            var r3 = Math.round(Math.random() * 370);
+            var g3 = Math.round(Math.random() * 370);
+            var b3 = Math.round(Math.random() * 370);
+            var rgb3 = `rgb(${r3}, ${g3}, ${b3})`;
+
+            var r4 = Math.round(Math.random() * 400);
+            var g4 = Math.round(Math.random() * 400);
+            var b4 = Math.round(Math.random() * 400);
+            var rgb4 = `rgb(${r4}, ${g4}, ${b4})`;
+
+            document.getElementById("colorBox").style.backgroundColor = rgb;
+            document.getElementById("colorCode").textContent = rgb;
+
+
+            document.getElementById("colorBox1").style.backgroundColor = rgb1;
+            document.getElementById("colorCode1").textContent = rgb1;
+
+
+            document.getElementById("colorBox2").style.backgroundColor = rgb2;
+            document.getElementById("colorCode2").textContent = rgb2;
+
+            document.getElementById("colorBox3").style.backgroundColor = rgb3;
+            document.getElementById("colorCode3").textContent = rgb3;
+
+            document.getElementById("colorBox4").style.backgroundColor = rgb4;
+            document.getElementById("colorCode4").textContent = rgb4;
+
+        }
+        setInterval(generateColor, 1000)
+    </script>
+
+</body>
+
+</html>
